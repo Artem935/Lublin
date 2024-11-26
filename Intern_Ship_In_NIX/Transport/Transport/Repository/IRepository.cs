@@ -18,5 +18,7 @@ namespace Transport.Repository
         public void ShowAll();
         public void AutoFill();
         public void DemonstrationBehavior();
+        public void Save(string path, int type);
+        public void Load(string path);
     }
 }

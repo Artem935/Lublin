@@ -1,6 +1,8 @@
 ﻿using Transport.Models.Objects;
 using Transport.Behavior;
+using Transport.Serserrealization;
 using Transport.DisplayConsole;
+using Transport.TransfonrmOnFile;
 
 namespace Transport.Repository
 {
@@ -104,6 +106,14 @@ namespace Transport.Repository
         {
             new AirplaneBehavior().DoSomething(1);
             new AirplaneBehavior().Turn();
+        }
+        public void Save(string path, int type)
+        {
+            new TransformOnFile<Airplane>().Save(path,transport, type);
+        }
+        public void Load(string path)
+        {
+            transport = new Deserrealiz<Airplane>().DeserrealizationXML(path);
         }
     }
 }

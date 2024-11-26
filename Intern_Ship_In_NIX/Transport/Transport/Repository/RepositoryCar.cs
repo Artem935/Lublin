@@ -8,8 +8,9 @@ using Transport.Models;
 using Transport.Models.Objects;
 using Transport.OrderByCondition;
 using Transport.OrderByCondition.CarSorting;
+using Transport.Serserrealization;
 using Transport.SortByCondition;
-
+using Transport.TransfonrmOnFile;
 
 namespace Transport.Repository
 {
@@ -104,7 +105,14 @@ namespace Transport.Repository
             new CarBehavior().DoSomething(1);
             new CarBehavior().Turn();
         }
-
+        public void Save(string path, int type)
+        {
+            new TransformOnFile<Car>().Save(path, transport, type);
+        }
+        public void Load(string path)
+        {
+            transport = new Deserrealiz<Car>().DeserrealizationXML(path);
+        }
         public void AutoFill()
         {
             AddList(new Car(1, "ewe", "wewe", 12, 12000));
