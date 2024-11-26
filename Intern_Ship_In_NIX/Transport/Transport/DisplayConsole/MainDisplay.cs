@@ -60,6 +60,10 @@ namespace Transport.DisplayConsole
                     else if (type == 2)
                         airPlane.DeliteObject(new DataVerification().CorrectDataInt($"Delite by :{new Airplane().PrintAvailableProperties()}")); 
                 }
+                else if (result == 0)
+                {
+                    return;
+                }
             }
         }
         private Car AddCar()
@@ -81,6 +85,7 @@ namespace Transport.DisplayConsole
             Console.WriteLine("2. Show all");
             Console.WriteLine("3. Find objects");
             Console.WriteLine("4. Delite object");
+            Console.WriteLine("0. End program");
             Console.WriteLine("=========================");
             return new DataVerification().CorrectDataInt("Point: ");
         }
