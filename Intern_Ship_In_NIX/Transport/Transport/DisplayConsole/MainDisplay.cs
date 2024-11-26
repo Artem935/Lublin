@@ -67,6 +67,14 @@ namespace Transport.DisplayConsole
                     else if (type == 2)
                         airPlane.DeliteObject(new DataVerification().CorrectDataInt($"Delite by :{new Airplane().PrintAvailableProperties()}")); 
                 }
+                else if (result == 5)
+                {
+                    int type = TransportType();
+                    if (type == 1)
+                        car.DemonstrationBehavior();
+                    else if (type == 2)
+                        airPlane.DemonstrationBehavior();
+                }
                 else if (result == 0)
                 {
                     return;
@@ -92,6 +100,7 @@ namespace Transport.DisplayConsole
             Console.WriteLine("2. Show all");
             Console.WriteLine("3. Find objects");
             Console.WriteLine("4. Delite object");
+            Console.WriteLine("5. Demonstration behavior of the objects");
             Console.WriteLine("0. End program");
             Console.WriteLine("=========================");
             return new DataVerification().CorrectDataInt("Point: ");

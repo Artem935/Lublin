@@ -2,6 +2,7 @@
 using System.Reflection.PortableExecutable;
 using System.Xml;
 using System.Xml.Serialization;
+using Transport.Behavior;
 using Transport.DisplayConsole;
 using Transport.Models;
 using Transport.Models.Objects;
@@ -97,6 +98,11 @@ namespace Transport.Repository
         {
             for (int i = 0; i < transport.Count(); i++)
                 transport[i].Id = i;
+        }
+        public void DemonstrationBehavior()
+        {
+            new CarBehavior().DoSomething(1);
+            new CarBehavior().Turn();
         }
 
         public void AutoFill()

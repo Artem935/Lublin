@@ -1,4 +1,5 @@
 ﻿using Transport.Models.Objects;
+using Transport.Behavior;
 using Transport.DisplayConsole;
 
 namespace Transport.Repository
@@ -98,6 +99,11 @@ namespace Transport.Repository
         public void OverwriteId()
         {
             for (int i = 0; i < transport .Count(); i++) { transport [i].Id = i; }
+        }
+        public void DemonstrationBehavior()
+        {
+            new AirplaneBehavior().DoSomething(1);
+            new AirplaneBehavior().Turn();
         }
     }
 }
