@@ -19,7 +19,7 @@ namespace Transport.DisplayConsole
                 if (result == 1)
                 {
                     int transportType = TransportType();
-                    int amount = new DataVerification().CorrectDataInt("Amoumt: ");
+                    int amount = new DataVerification().CorrectDataInt("Amount: ");
                     if (transportType == 1)
                     {
                         for (int i = 0; i < amount; i++)
@@ -56,9 +56,9 @@ namespace Transport.DisplayConsole
                 {
                     int type = TransportType();
                     if (type == 1)
-                        car.DeliteObject(new DataVerification().CorrectDataInt($"Delete by :{new Car().PrintAvailableProperties()}"));
+                        car.DeliteObject(new DataVerification().CorrectDataInt($"Delite by :{new Car().PrintAvailableProperties()}"));
                     else if (type == 2)
-                        airPlane.DeliteObject(new DataVerification().CorrectDataInt($"Delete by :{new Airplane().PrintAvailableProperties()}")); 
+                        airPlane.DeliteObject(new DataVerification().CorrectDataInt($"Delite by :{new Airplane().PrintAvailableProperties()}")); 
                 }
             }
         }
@@ -66,21 +66,21 @@ namespace Transport.DisplayConsole
         {
             DataVerification dataVerification = new DataVerification();
             return new Car(0, dataVerification.CorrectDataString("Model: "), dataVerification.CorrectDataString("Brand: "),
-                dataVerification.CorrectDataFLoat("Fuil Consumption: "), dataVerification.CorrectDataDecimal("Price: "));
+                dataVerification.CorrectDataFLoat("Fuel Consumption: "), dataVerification.CorrectDataDecimal("Price: "));
 
         }
         private Airplane AddAirplane()
         {
             DataVerification dataVerification = new DataVerification();
             return new Airplane(0, dataVerification.CorrectDataString("Model: "), dataVerification.CorrectDataString("Brand: "),
-                dataVerification.CorrectDataFLoat("Fuel Consumpton: "), dataVerification.CorrectDataDecimal("Price: "));
+                dataVerification.CorrectDataFLoat("Fuel Consumption: "), dataVerification.CorrectDataDecimal("Price: "));
         }
         public int Menu()
         {
             Console.WriteLine("1. Add objects");
-            Console.WriteLine("2. Show al");
+            Console.WriteLine("2. Show all");
             Console.WriteLine("3. Find objects");
-            Console.WriteLine("4. Delit object");
+            Console.WriteLine("4. Delite object");
             Console.WriteLine("=========================");
             return new DataVerification().CorrectDataInt("Point: ");
         }
