@@ -98,5 +98,16 @@ namespace Transport.Repository
             for (int i = 0; i < transport.Count(); i++)
                 transport[i].Id = i;
         }
+
+        public void AutoFill()
+        {
+            AddList(new Car(1, "ewe", "wewe", 12, 12000));
+            AddList(new Car(1, "A3", "Audi", 5.3f, 7000));
+            AddList(new Car(1, "A6", "Audi", 4.5f, 10000));
+            AddList(new Car(1, "M2", "BMW", 6f, 10000));
+            AddList(new Car(1, "M8", "BMW", 6f, 20000));
+            AddList(new Car(1, "X2", "BMW", 4f, 12500));
+            AddList(new Car(1, "X7", "BMW", 9.8f, 25000));
+        }
     }
 }

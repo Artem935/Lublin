@@ -84,6 +84,17 @@ namespace Transport.Repository
                 Console.WriteLine(item);
             }
         }
+        public void AutoFill()
+        {
+            AddList(new Airplane(1, "707", "Boing", 4.3f, 10000000));
+            AddList(new Airplane(1, "717", "Boing", 6.5f, 15000000));
+            AddList(new Airplane(1, "727", "Boing", 5.3f, 70000000));
+            AddList(new Airplane(1, "737", "Boing", 4.5f, 10000000));
+            AddList(new Airplane(1, "747", "Boing", 6f, 18900000));
+            AddList(new Airplane(1, "757", "Boing", 6f, 23400000));
+            AddList(new Airplane(1, "767", "Boing", 4f, 12500000));
+            AddList(new Airplane(1, "777", "Boing", 9.8f, 25000000));
+        }
         public void OverwriteId()
         {
             for (int i = 0; i < transport .Count(); i++) { transport [i].Id = i; }

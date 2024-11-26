@@ -16,5 +16,6 @@ namespace Transport.Repository
         public int FindObject(int choise);
         public T ReturnObjectById(int id);
         public void ShowAll();
+        public void AutoFill();
     }
 }
