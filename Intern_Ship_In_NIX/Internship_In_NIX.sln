@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Output", "Output\Output.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transport", "Transport\Transport\Transport.csproj", "{20E85437-E453-480A-AAF9-78E2EAD6CFE5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xunit1", "Xunit1\Xunit1.csproj", "{D715B4AE-F27E-497C-B16C-5ACEEA569FEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{20E85437-E453-480A-AAF9-78E2EAD6CFE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20E85437-E453-480A-AAF9-78E2EAD6CFE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20E85437-E453-480A-AAF9-78E2EAD6CFE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D715B4AE-F27E-497C-B16C-5ACEEA569FEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D715B4AE-F27E-497C-B16C-5ACEEA569FEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D715B4AE-F27E-497C-B16C-5ACEEA569FEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D715B4AE-F27E-497C-B16C-5ACEEA569FEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
