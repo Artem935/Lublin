@@ -7,7 +7,7 @@ using Transport.Serserrealization;
 
 namespace Transport.TransfonrmOnFile
 {
-    public class TransformOnFile<T> where T : class
+    public class TransformOnFile<T>:ITransformOnFile<T> where T : class
     {
         public void Save(string path,List<T> transport,int type)
         {
